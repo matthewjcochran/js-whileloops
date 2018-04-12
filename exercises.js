@@ -18,7 +18,12 @@ while (i<10){
 
 /*1. Use a while loop and print out a list of numbers from 1 to 10*/
 
+var i = 1;
 
+while( i <= 10){
+	console.log(i);
+	i++;
+}
 
 /*2. Use a while loop to create the following message:
 
@@ -28,6 +33,13 @@ while (i<10){
 ...
 ...
 "Now serving 11"*/
+
+var i = 1;
+
+while( i <= 11){
+	console.log('Now serving ' + i);
+	i++;
+}
 
 
 
@@ -41,7 +53,12 @@ while (i<10){
 
 var tvShows = ["Breaking Bad", "Game of Thrones", "The Bachelor", "The Walking Dead", "Keeping Up with the Kardasians"];
 
+var i = 0;
 
+while(i < tvShows.length){
+	console.log('I like to binge watch ' + tvShows[i]);
+	i++;
+}
 
 /*4. Generate a multiplication table for the number 3 and print out the following:
 
@@ -55,8 +72,12 @@ var tvShows = ["Breaking Bad", "Game of Thrones", "The Bachelor", "The Walking D
 
 */
 
+var i = 1;
 
-
+while(i <= 9){
+	console.log(i + ' X 3 = ' + (i*3));
+	i++;
+}
 
 
 /*5. Multiples of 3 and 5. Create a while loop that will loop through 100 numbers. Your job is to program the following:
@@ -86,6 +107,21 @@ devleague homie!
 ...
 ...*/
 
+var i = 0;
+
+while(i < 100){
+	if(i%3 === 0 && i%5 !== 0){
+		console.log('dev');
+	}else if(i%3 !== 0 && i%5 === 0){
+		console.log('league');
+	}else if(i%3 === 0 && i%5 === 0){
+		console.log('devleague homie!');
+	}else{
+		console.log(i);
+	}
+	i++;
+}
+
 
 /*
  * #6
@@ -98,6 +134,17 @@ devleague homie!
  *Pass in a number value to invoke your function. Console.log donutBought.
 */ 
 
+var donutPrice = 5;
+var donutBought = 0;
 
+function buyDonut(budget){
+	while(budget >= 0){
+
+		console.log('You now have $' + budget + '.  Let\'s buy a donut!');
+		budget -= donutPrice;
+	}
+}
+
+buyDonut(33);
 
 
